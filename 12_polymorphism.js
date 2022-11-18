@@ -31,6 +31,8 @@ var Student = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Student.prototype.work = function () {
+        _super.prototype.work.call(this);
+        _super.prototype.mobile.call(this);
         console.log("\nHello I am from Student class work() , I am student of Codemind Technology");
     };
     Student.prototype.mobile = function () {
@@ -65,11 +67,16 @@ var Trainer = /** @class */ (function (_super) {
     return Trainer;
 }(Person));
 var persons = new Array(new Student(), new Employee(), new Trainer());
+//sir logic
 for (var _i = 0, persons_1 = persons; _i < persons_1.length; _i++) {
     var iterator = persons_1[_i];
-    console.log(iterator.work());
+    iterator.work();
+    iterator.mobile();
 }
-// let array=[new Person(),new Student(),new Employee(),new Trainer()];
-// for (const iterator of array) {
-//     console.log(iterator.work(),iterator.mobile()); 
-// }
+//my logic
+var array = [new Student(), new Employee(), new Trainer()];
+for (var _a = 0, array_1 = array; _a < array_1.length; _a++) {
+    var iterator = array_1[_a];
+    iterator.work();
+    iterator.mobile();
+}

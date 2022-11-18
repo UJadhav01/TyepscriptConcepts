@@ -9,8 +9,10 @@ mobile(){
     console.log(`I am Person mobile() , and I always helps to perform different task`);
 }
 }
-class Student extends Person{
+class Student extends Person{  
 work(){
+    super.work(); 
+    super.mobile();
     console.log(`\nHello I am from Student class work() , I am student of Codemind Technology`);
 }
     mobile(){
@@ -35,13 +37,17 @@ class Trainer extends Person{
 }
 let persons:Person[] = new Array( new Student(), new Employee(), new Trainer () ) ;
 
+//sir logic
 for (const iterator of persons) {
-    console.log(iterator.work()); 
+    iterator.work();
+    iterator.mobile(); 
 }
 
-// let array=[new Person(),new Student(),new Employee(),new Trainer()];
+//my logic
+// let array:Person[]=[new Student(),new Employee(),new Trainer()];
 // for (const iterator of array) {
-//     console.log(iterator.work(),iterator.mobile()); 
+//     iterator.work();
+//     iterator.mobile(); 
 // }
 
 
