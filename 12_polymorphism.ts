@@ -44,7 +44,7 @@ for (const iterator of persons) {
 }
 
 //my logic
-// let array:Person[]=[new Student(),new Employee(),new Trainer()];
+// let array=[new Person(),new Student(),new Employee(),new Trainer()];
 // for (const iterator of array) {
 //     iterator.work();
 //     iterator.mobile(); 
