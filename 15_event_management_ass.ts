@@ -1,6 +1,12 @@
-class Organizer{
-    id:number=1;
-    name:string='Aditya'; 
+interface IOrganize{
+    id:number
+    name:string
+    display():void
+}
+
+class Organizer implements IOrganize{
+    id=1;
+    name='Aditya'; 
    
     //for displaying id and name of organizer
     constructor(){
@@ -13,8 +19,6 @@ class Organizer{
 }
 
 class ClassEvent extends Organizer{
-    id:number;          //event id
-    name:string;        //name of event
     description:string;   //description of event
     category:string;    //for type of event like business,social,private
     eventDate:string //for get date of event
@@ -36,20 +40,20 @@ class ClassEvent extends Organizer{
 }
 
 class Venue extends Organizer{
-    id:number;
-    name:string;
-
+    
   description:string //small description
   category:string  //venue type like birthday event games time,snack time etc
   venue:string  //for venue detail
   address:string  //for address
     constructor(id:number,name:string,description:string,address:string){
+
         super();
         this.id=id
         this.name=name
         this.description=description
         this.address=address
     }
+   
     //for display data of venue
     display(){
         console.log(`\nVenue Id = ${this.id}\nName of Venue = ${this.name}\nVenue description = ${this.description}\nAddress = ${this.address}`);
@@ -64,7 +68,7 @@ let currentDate = `${day}-${month}-${year}`;
 let startTime1=(date.getHours())
 
 let array:Organizer[]=[new ClassEvent(2,'Birthday Party',' Lets Celebrate...!,\n\t\t\t\tJoin us in celebrating day at jack 11th birthday party!','this is family event with an enjoyable evening with music , dinner and dancing',currentDate,startTime1),
-new Venue(2,'Shivneri hotel','with parking facility','\tShivneri hotel ,\n\t\t\t102 hall,\n\t\t\tstation road solapur')];
+new Venue(3,'Shivneri hotel','with parking facility','\tShivneri hotel ,\n\t\t\t102 hall,\n\t\t\tstation road solapur')];
 for(var event_org of array) {
     event_org.display();
 }

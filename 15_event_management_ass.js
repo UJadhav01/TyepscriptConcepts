@@ -68,7 +68,7 @@ var year = date.getFullYear();
 var currentDate = "".concat(day, "-").concat(month, "-").concat(year);
 var startTime1 = (date.getHours());
 var array = [new ClassEvent(2, 'Birthday Party', ' Lets Celebrate...!,\n\t\t\t\tJoin us in celebrating day at jack 11th birthday party!', 'this is family event with an enjoyable evening with music , dinner and dancing', currentDate, startTime1),
-    new Venue(2, 'Shivneri hotel', 'with parking facility', '\tShivneri hotel ,\n\t\t\t102 hall,\n\t\t\tstation road solapur')];
+    new Venue(3, 'Shivneri hotel', 'with parking facility', '\tShivneri hotel ,\n\t\t\t102 hall,\n\t\t\tstation road solapur')];
 for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
     var event_org = array_1[_i];
     event_org.display();
